@@ -55,6 +55,7 @@ body {
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50% );
+    text-align: center;
     
 }
 
@@ -69,7 +70,7 @@ body {
     font-weight: 400px;
     letter-spacing: 35px;
     animation-name: moveToBottom;
-    animation-duration: 1s;
+    animation-duration: 0.90s;
     animation-timing-function: ease-out;
 }
 
@@ -79,8 +80,35 @@ body {
     font-size: 20;
     letter-spacing: 11px;
     animation-name: moveToTop;
-    animation-duration: 1s;
+    animation-duration: 0.90s;
     animation-timing-function: ease-out;
+    margin-bottom: 30px;
+  
+}
+
+.btn:link,
+.btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    border-radius: 100px;
+    display: inline-block;
+    animation: moveToTop 1s ease-out;
+    transition: all .2s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    /* box-shadow: ; */
+}
+
+.btn:active {
+    transform: translateY(-1px);
+}
+
+.btn-white {
+    background-color: #ffffff;
+    color: #2d3436;
 }
 
 @keyframes moveToBottom {
@@ -106,3 +134,4 @@ body {
         transform: translate(0);
     }
 }
+
