@@ -40,21 +40,21 @@ body {
     clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
 }
 
-.logo-box {
+.header__logo-box {
     position: absolute;
     top: 3rem;
     left: 3rem ;
 }
 
-.logo {
+.header__logo {
     height: 3.5rem;
 }
-.logo:hover {
+.header__logo:hover {
     transition: all .2s ease-in-out;
     transform: scale(1.1)
 }
 
-.box-header-middle {
+.header__text-box {
     position: absolute;
     top: 40%;
     left: 50%;
@@ -68,7 +68,7 @@ body {
     text-transform: uppercase;
 }
 
-.heading-title-main {
+.heading-title--main {
     display: block;
     font-size: 6rem;
     font-weight: 40rem;
@@ -78,7 +78,7 @@ body {
     animation-timing-function: ease-out;
 }
 
-.heading-title-sub {
+.heading-title--sub {
     display: block;
     font-weight: 300;
     font-size: 20;
@@ -110,12 +110,12 @@ body {
     box-shadow: 0 1rem 1rem #2d34368c;
 }
 
-.btn-white {
+.btn--white {
     background-color: #ffffff;
     color: #2d3436;
 }
 
-.btn-animation {
+.btn--animation {
     animation: moveInButton .5s ease-out .75s;
     animation-fill-mode: backwards;
 }
