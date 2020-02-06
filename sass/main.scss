@@ -1,0 +1,145 @@
+$color-primary : #55c57a;
+$color-primary-light : #7ed56f;
+$color-primary-dark : #28b485;
+
+@mixin style-heading-title($fontSize, $fontWeight, $letterSpacing, $animationName, $animationDuration) {
+    display: block;
+    font-size: $fontSize;
+    font-weight: $fontWeight;
+    letter-spacing: $letterSpacing;
+    animation-name: $animationName;
+    animation-duration: $animationDuration;
+    animation-timing-function: ease-out;
+}
+
+html {
+    font-size: 62.5%; 
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.7;
+    color: #777777;
+    padding: 30px; 
+}
+
+.header {
+    height: 95vh;
+    background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
+    background-size: cover;
+    background-position: top;
+    position: relative;
+    clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%); 
+}
+
+.header__logo-box {
+    position: absolute;
+    top: 3rem;
+    left: 3rem ;
+}
+
+.header__logo {
+    height: 3.5rem;
+}
+
+.header__logo:hover {
+    transition: all .2s ease-in-out;
+    transform: scale(1.1)
+}
+
+.header__text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50% );
+    text-align: center;
+}
+
+.heading-primary {
+    color: #ffffff;
+    text-transform: uppercase; 
+}
+
+.heading-title--main {
+    display: block;
+    @include style-heading-title(6rem, 40rem, 3.5rem, moveToBottom, 0.90s);
+    animation-timing-function: ease-out;
+    
+}
+
+.heading-title--sub {
+    display: block;
+    @include style-heading-title(300, 20, 1.1rem, moveToTop, 0.90s);
+    animation-timing-function: ease-out;
+    margin-bottom: 3rem;
+
+}
+
+.btn:link,
+.btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 4rem;
+    border-radius: 10rem;
+    display: inline-block;
+    transition: all .2s; 
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 2rem; 
+}
+
+.btn:active {
+transform: translateY(-1px);
+box-shadow: 0 1rem 1rem #2d34368c; 
+}
+
+.btn--white {
+    background-color: #ffffff;
+    color: #2d3436;
+}
+
+.btn--animation {
+    animation: moveInButton .5s ease-out .75s;
+    animation-fill-mode: backwards;
+}
+
+@keyframes moveToBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px); 
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0); 
+    } 
+}
+
+@keyframes moveToTop {
+    0% {
+        opacity: 0;
+        transform: translateY(20px); 
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0); 
+    } 
+}
+
+@keyframes moveInButton {
+    0% {
+        opacity: 0;
+        transform: scale(0.1); 
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1); 
+    } 
+}
+  
